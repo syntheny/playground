@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage("Hello Goodbye World") {
             steps {
-                sh "hw.sh"
+                sh '${$WORKSPACE}/hw.sh'
             }
         }
     }
