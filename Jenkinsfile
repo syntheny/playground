@@ -7,6 +7,7 @@ pipeline {
     stages {
         stage("Hello Goodbye World") {
             steps {
+                sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
                 sh '${WORKSPACE}/hw.sh'
             }
         }
