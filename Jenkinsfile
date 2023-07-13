@@ -8,8 +8,8 @@ pipeline {
         stage("Hello Goodbye World") {
             steps {
                 sh "ls -lrt ${env.WORKSPACE}"
-                sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
-                sh '${WORKSPACE}/hw.sh'
+                // sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
+                sh 'bash ${WORKSPACE}/hw.sh'
             }
         }
     }
