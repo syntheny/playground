@@ -7,6 +7,9 @@ pipeline {
     stages {
         stage("Hello Goodbye World") {
             steps {
+                withCredentials(string(credentialsId: 'CHUBBA', variable: 'chubba')) {
+                    echo "CHUBBA: ${env.chubba}"
+                }                                
                 dir("${env.WORKSPACE}") {
                     // sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
                     sh 'bash hw.sh'
