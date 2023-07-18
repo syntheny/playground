@@ -1,9 +1,13 @@
 #!/bin/bash
 echo "hello world: $*"
 echo "XYZ: $XYZ"
+set -x
+echo "Showing secrets now -- or just one secret"
 echo "CHUBBA: $chubba"
 [ "$chubba" = "****" ] && echo "Chubba is all stars"
 [ "$chubba" = "secret" ] && echo "Chubba is secret"
+[ "$chubba" = "secret" ] && echo "Chubba is hidden from view"
+set +x
 
 echo "goodbye cruel world"
 
