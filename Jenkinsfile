@@ -14,9 +14,7 @@ pipeline {
                     echo "XYZ: ${env.XYZ}"\n
                 '''
                 withCredentials([string(credentialsId: 'CHUBBA', variable: 'chubba')]) {
-                    sh '''#!/bin/bash\n
-                        echo "CHUBBA: ${env.chubba}"\n'
-                    '''
+                    sh 'bash hw.sh ${env.chubba}'
                 }                                
                 dir("${env.WORKSPACE}") {
                     // sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
