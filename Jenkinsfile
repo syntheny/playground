@@ -10,9 +10,13 @@ pipeline {
     stages {
         stage("Hello Goodbye World") {
             steps {
-                sh 'echo "XYZ: ${env.XYZ}"'
+                sh '''#!/bin/bash\n
+                    echo "XYZ: ${env.XYZ}"\n
+                '''
                 withCredentials([string(credentialsId: 'CHUBBA', variable: 'chubba')]) {
-                    sh 'echo "CHUBBA: ${env.chubba}"'
+                    sh '''#!/bin/bash\n
+                        echo "CHUBBA: ${env.chubba}"\n'
+                    '''
                 }                                
                 dir("${env.WORKSPACE}") {
                     // sh "chmod +x -R ${env.WORKSPACE}/hw.sh"
