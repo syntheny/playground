@@ -1,5 +1,7 @@
 #!/bin/bash
 echo "hello world: $*"
+echo "XYZ: $XYZ"
+echo "CHUBBA: $chubba"
 
 echo "goodbye cruel world"
 
