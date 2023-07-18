@@ -2,6 +2,7 @@
 echo "hello world: $*"
 echo "XYZ: $XYZ"
 echo "CHUBBA: $chubba"
+set
 
 echo "goodbye cruel world"
 
