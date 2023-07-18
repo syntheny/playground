@@ -2,7 +2,8 @@
 echo "hello world: $*"
 echo "XYZ: $XYZ"
 echo "CHUBBA: $chubba"
-set
+[ "$chubba" = "****" ] && echo "Chubba is all stars"
+[ "$chubba" = "secret" ] && echo "Chubba is secret"
 
 echo "goodbye cruel world"
 
